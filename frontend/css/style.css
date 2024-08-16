@@ -33,7 +33,7 @@ header {
     color: white;                   /* Cor do texto */
     padding: 20px;                  /* Espaçamento interno */
     text-align: center;             /* Alinhamento do texto */
-    border-bottom: 2px solid #414850; /* Borda inferior para separação */ 
+    border-bottom: 2px solid rgb(102, 255, 0); /* Borda inferior para separação */ 
     width: 100%;                    /* Largura total */
     position: fixed;                /* Fixa o cabeçalho no topo */
     top: 0;                         /* Alinha no topo da página */
@@ -41,13 +41,13 @@ header {
     z-index: 1000; 
 }
 
-header h1 {
-    margin: 0;  
-    font-size: 24px;        
-}
 
-p {
-    color: greenyellow;
+
+
+
+p.name {
+    font-size: 10px;
+    color: rgb(102, 255, 0);
 }
 
 
