@@ -19,6 +19,8 @@ const colors = [
     "gold"
 ]
 
+
+
 const user = { id: "", name: "", color: "" }
 
 let websocket
