@@ -1,7 +1,7 @@
 {
 "name": "ZapZap",
 "short_name": "ZapZap",
-"start_url": "https://chat-frontend-1a3u.onrender.com/",
+"start_url": "https://chat-devmnl.vercel.app",
 "display": "fullscreen",
 "description": "Aplicativo de mensagens",
 "lang": "portuguese",
