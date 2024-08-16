@@ -4,6 +4,9 @@ const loginForm = login.querySelector(".login__form");
 const loginInput = login.querySelector(".login__input");
 
 // chat elements
+const header = document.querySelector(".header")
+const online = document.querySelector(".online")
+
 const chat = document.querySelector(".chat");
 const chatForm = chat.querySelector(".chat__form");
 const chatInput = chat.querySelector(".chat__input");
@@ -65,17 +68,35 @@ const scrollScreen = () => {
 }
 
 const processMessages = ({ data }) => {
-  const { userId, userName, userColor, content } = JSON.parse(data);
+    console.log("Message received:", data); // Log para diagnóstico
+    const parsedData = JSON.parse(data);
 
-  const message =
-    userId == user.id
-      ? createMessageSelfElement(content)
-      : createMessageOtherElement(content, userName, userColor);
+    if (parsedData.type === 'onlineCount') {
+      console.log("Updating online count:", parsedData.count);
+      updateOnlineCount(parsedData.count);
+    } else {
+      const { userId, userName, userColor, content } = parsedData;
 
-  chatMessages.appendChild(message);
+      const message =
+        userId == user.id
+          ? createMessageSelfElement(content)
+          : createMessageOtherElement(content, userName, userColor);
 
-  scrollScreen()
+      chatMessages.appendChild(message);
+      scrollScreen();
+    }
 };
+
+  
+  const updateOnlineCount = (count) => {
+     
+    online.textContent = `Online: ${count}`;
+
+
+
+
+  };
+  
 
 const handleLogin = (event) => {
   event.preventDefault();
@@ -86,8 +107,10 @@ const handleLogin = (event) => {
 
   login.style.display = "none";
   chat.style.display = "flex";
+  header.style.display = "flex";
+  
 
-  websocket = new WebSocket("ws://localhost:8080");
+  websocket = new WebSocket("wss://chat-backend-wr3t.onrender.com");
   websocket.onmessage = processMessages;
 };
 

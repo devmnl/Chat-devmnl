@@ -6,11 +6,20 @@
 
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
     <title>Chat-ZapZap</title>
   </head>
   <body>
+    
 
     <section class="container">
+
+        <header class="header">
+            <h1>ZapZap</h1>
+            <p class="online">Online: </p>
+
+          </header>
+
       <section class="login">
         <h2>Login</h2>
         <form class="login__form">
@@ -28,13 +37,6 @@
       <section class="chat">
          <section class="chat__messages">
 
-             <!--<div class="message--self">Hello, World!</div>
-             
-             <div class="message--other">
-                <span class="message--sender">Manual do dev</span>
-                Ola mundo
-             </div>-->
-
          </section>
 
         <form class="chat__form">
@@ -44,11 +46,14 @@
             placeholder="Digite uma mensagem"
             required
           />
+        
+
           <button type="submit" class="chat__button">
             <span class="material-symbols-outlined">
                 send
                 </span>
           </button>
+          
         </form>
       </section>
 
