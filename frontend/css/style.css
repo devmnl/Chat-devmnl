@@ -12,7 +12,10 @@
 }
 
 body {
-    background: url("../images/background.png");
+    background: url("/frontend/images/guy-hooded-sweatshirt-dark.jpg");
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    background-position: center; /* Centraliza a imagem no elemento */
+    background-size: cover; /* Garante que a imagem cubra todo o elemento */
     color: #f2f2f2;   
 }
 
