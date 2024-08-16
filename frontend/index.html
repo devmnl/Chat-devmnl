@@ -11,7 +11,7 @@
     />
     <link rel="manifest" href="manifest.json" />
     <script>
-      navigator.serviceWorker.register("frontend/pwabuilder-adv-sw.js");
+      navigator.serviceWorker.register("pwabuilder-adv-sw.js");
     </script>
     <title>Chat-ZapZap</title>
   </head>
@@ -55,11 +55,6 @@
     </section>
 
     <script src="./js/script.js" defer></script>
-    <script>
-      if (typeof navigator.serviceWorker !== 'undefined') {
-        navigator.serviceWorker.register('sw.js')
-      }
-    </script>
     
   </body>
 </html>
