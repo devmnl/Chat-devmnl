@@ -5,26 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
-    
-
-  
-  <link rel="manifest" href="/frontend/manifest.json" />  
-  <script>navigator.serviceWorker.register("frontend/pwabuilder-adv-sw.js")</script> 
-  <title>Chat-ZapZap</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
+    />
+    <link rel="manifest" href="manifest.json" />
+    <script>
+      navigator.serviceWorker.register("frontend/pwabuilder-adv-sw.js");
+    </script>
+    <title>Chat-ZapZap</title>
   </head>
   <body>
-    
-
     <section class="container">
+      <header class="header">
+        <h1>ZapZap</h1>
 
-        <header class="header">
-            <h1>ZapZap</h1>
-    
-
-            <p class="name">By Manoel</p>
-
-          </header>
+        <p class="name">By Manoel</p>
+      </header>
 
       <section class="login">
         <h2>Login</h2>
@@ -39,11 +36,8 @@
         </form>
       </section>
 
-
       <section class="chat">
-         <section class="chat__messages">
-
-         </section>
+        <section class="chat__messages"></section>
 
         <form class="chat__form">
           <input
@@ -52,28 +46,14 @@
             placeholder="Digite uma mensagem"
             required
           />
-          
 
           <button type="submit" class="chat__button">
-            <span class="material-symbols-outlined">
-                send
-                </span>
+            <span class="material-symbols-outlined"> send </span>
           </button>
-          
         </form>
       </section>
-
-
     </section>
 
-
-
-
-    
-
-
-
-    
     <script src="./js/script.js" defer></script>
   </body>
 </html>
