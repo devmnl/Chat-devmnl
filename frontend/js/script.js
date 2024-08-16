@@ -16,8 +16,21 @@ const colors = [
     "cornflowerblue",
     "darkkhaki",
     "hotpink",
-    "gold"
+    "gold",
+    "turquoise",
+    "limegreen",
+    "dodgerblue",
+    "deeppink",
+    "mediumslateblue",
+    "crimson",
+    "orange",
+    "yellowgreen",
+    "royalblue",
+    "magenta",
+    "cyan",
+    "springgreen"
 ]
+
 
 
 
