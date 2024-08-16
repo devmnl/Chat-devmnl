@@ -58,6 +58,7 @@ p.name {
     background-color:#212121;
     border-radius: 5px;
     padding: 20px;
+    
 }
 
 .login>h2 {
@@ -191,5 +192,56 @@ p.name {
     margin-bottom: 15px;
     font-weight: 700;
     color: cadetblue;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.7s, opacity 0.8s;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center; /* Alinha todo o conteúdo do modal ao centro */
+    color: #121212;
+}
+
+.close-button {
+    float: right;
+    cursor: pointer;
+}
+
+.modal-content > button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block; /* Faz o botão ocupar a linha inteira */
+    width: 100%; /* Define a largura do botão para acompanhar a largura do conteúdo */
+}
+
+ul {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding padrão da lista */
+}
+
+li {
+    padding: 8px 0; /* Adiciona um espaçamento vertical entre os itens da lista */
 }
 

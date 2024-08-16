@@ -13,8 +13,7 @@
     <script>
       navigator.serviceWorker.register("pwabuilder-adv-sw.js");
     </script>
-  <script>navigator.serviceWorker.register("frontend/pwabuilder-adv-sw.js")</script> 
-  <script>navigator.serviceWorker.register("frontend/pwabuilder-adv-sw.js")</script> 
+
     <title>Chat-ZapZap</title>
   </head>
   <body>
@@ -24,6 +23,20 @@
 
         <p class="name">By Manoel</p>
       </header>
+
+      <div id="policyModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <h2>Política de Respeito no Chat</h2>
+            <p>Este chat é um espaço para comunicação e troca de ideias. Pedimos que todos os usuários sigam nossa política de respeito:</p>
+            <ul>
+                <li>Respeite a opinião dos outros.</li>
+                <li>Evite o uso de palavras ofensivas.</li>
+                <li>Mantenha um ambiente saudável e acolhedor.</li>
+            </ul>
+            <button onclick="closeModal()">Concordo</button>
+        </div>
+    </div>
 
       <section class="login">
         <h2>Login</h2>

@@ -110,44 +110,17 @@ loginForm.addEventListener("submit", handleLogin)
 chatForm.addEventListener("submit", sendMessage)
 
 
-//service
-if (typeof navigator.serviceWorker !== 'undefined') {
-    navigator.serviceWorker.register('sw.js')
-  }
-  const CACHE_NAME = 'cool-cache';
 
-// Add whichever assets you want to pre-cache here:
-const PRECACHE_ASSETS = [
-'/assets/',
-'/src/'
-]
+window.onload = function() {
+    showModal();
+};
 
-// Listener for the install event - pre-caches our assets list on service worker install.
-self.addEventListener('install', event => {
-event.waitUntil((async () => {
-    const cache = await caches.open(CACHE_NAME);
-    cache.addAll(PRECACHE_ASSETS);
-})());
-});
+function showModal() {
+    document.getElementById('policyModal').style.visibility = 'visible';
+    document.getElementById('policyModal').style.opacity = 1;
+}
 
-self.addEventListener('activate', event => {
-event.waitUntil(self.clients.claim());
-});
-
-self.addEventListener('fetch', event => {
-event.respondWith(async () => {
-  const cache = await caches.open(CACHE_NAME);
-
-  // match the request to our cache
-  const cachedResponse = await cache.match(event.request);
-
-  // check if we got a valid response
-  if (cachedResponse !== undefined) {
-      // Cache hit, return the resource
-      return cachedResponse;
-  } else {
-    // Otherwise, go to the network
-      return fetch(event.request)
-  };
-});
-});
+function closeModal() {
+    document.getElementById('policyModal').style.visibility = 'hidden';
+    document.getElementById('policyModal').style.opacity = 0;
+}
