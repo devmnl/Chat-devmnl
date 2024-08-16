@@ -13,9 +13,6 @@
 
 body {
     background: url("/frontend/images/background.png");
-    background-repeat: no-repeat; /* Evita a repetição da imagem */
-    background-position: center; /* Centraliza a imagem no elemento */
-    background-size: cover; /* Garante que a imagem cubra todo o elemento */
     color: #f2f2f2;   
 }
 
