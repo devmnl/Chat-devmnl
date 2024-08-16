@@ -5,8 +5,6 @@ const loginInput = login.querySelector(".login__input");
 
 // chat elements
 const header = document.querySelector(".header")
-const online = document.querySelector(".online")
-
 const chat = document.querySelector(".chat");
 const chatForm = chat.querySelector(".chat__form");
 const chatInput = chat.querySelector(".chat__input");
@@ -68,35 +66,17 @@ const scrollScreen = () => {
 }
 
 const processMessages = ({ data }) => {
-    console.log("Message received:", data); // Log para diagnóstico
-    const parsedData = JSON.parse(data);
+  const { userId, userName, userColor, content } = JSON.parse(data);
 
-    if (parsedData.type === 'onlineCount') {
-      console.log("Updating online count:", parsedData.count);
-      updateOnlineCount(parsedData.count);
-    } else {
-      const { userId, userName, userColor, content } = parsedData;
+  const message =
+    userId == user.id
+      ? createMessageSelfElement(content)
+      : createMessageOtherElement(content, userName, userColor);
 
-      const message =
-        userId == user.id
-          ? createMessageSelfElement(content)
-          : createMessageOtherElement(content, userName, userColor);
+  chatMessages.appendChild(message);
 
-      chatMessages.appendChild(message);
-      scrollScreen();
-    }
+  scrollScreen()
 };
-
-  
-  const updateOnlineCount = (count) => {
-     
-    online.textContent = `Online: ${count}`;
-
-
-
-
-  };
-  
 
 const handleLogin = (event) => {
   event.preventDefault();
