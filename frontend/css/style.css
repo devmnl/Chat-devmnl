@@ -200,48 +200,69 @@ p.name {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75); /* Fundo mais escuro */
     display: flex;
     justify-content: center;
     align-items: center;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0.7s, opacity 0.8s;
+    transition: visibility 0s linear 0.5s, opacity 0.5s;
 }
 
 .modal-content {
     background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    width: 80%;
-    max-width: 500px;
-    text-align: center; /* Alinha todo o conteúdo do modal ao centro */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra suave */
+    width: 90%;
+    max-width: 600px; /* Ajusta a largura máxima para telas grandes */
+    text-align: center;
+    transition: transform 0.3s ease-out; /* Transição suave para transformações */
     color: #121212;
 }
 
 .close-button {
-    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    color: #bbb; /* Cor mais suave */
     cursor: pointer;
+    border: none;
+    background: none;
+    position: absolute;
+    top: 10px;
+    right: 20px;
 }
 
 .modal-content > button {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #4CAF50;
-    color: rgb(255, 255, 255);
+    background-color: #4CAF50; /* Mantém a cor do botão */
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    display: block; /* Faz o botão ocupar a linha inteira */
-    width: 100%; /* Define a largura do botão para acompanhar a largura do conteúdo */
+    transition: background-color 0.3s; /* Efeito suave ao mudar cor do botão */
+    font-size: 16px;
+    
 }
 
+.modal-content > button:hover {
+    background-color: #367c39; /* Escurece o botão ao passar o mouse */
+}
+
+
 ul {
-    list-style: none; /* Remove os marcadores da lista */
-    padding: 0; /* Remove o padding padrão da lista */
+    list-style: none;
+    padding: 0;
+    margin: 20px 0; /* Aumenta a margem ao redor da lista */
 }
 
 li {
-    padding: 8px 0; /* Adiciona um espaçamento vertical entre os itens da lista */
+    padding: 8px 0;
+    font-size: 16px; /* Aumenta o tamanho da fonte dos itens */
+}
+
+h2 {
+    margin-bottom: 20px; /* Aumenta o espaço abaixo do título */
 }
 
