@@ -1,7 +1,7 @@
 {
     "name": "ZapZap",
     "short_name": "ZapZap",
-    "start_url": "https://chat-devmnl.vercel.app",
+    "start_url": "https://chat-devmnl.vercel.app/",
     "display": "fullscreen",
     "description": "Aplicativo de mensagens",
     "lang": "pt",
@@ -14,7 +14,7 @@
         "src": "android-launchericon-512-512.png",
         "sizes": "512x512",
         "type": "image/png",
-        "purpose": "maskable"
+        "purpose": "any"
       },
       {
         "src": "/frontend/images/android-launchericon-192-192.png",
